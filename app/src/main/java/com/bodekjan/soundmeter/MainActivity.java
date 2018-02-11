@@ -34,7 +34,11 @@ import com.github.mikephil.charting.formatter.FillFormatter;
 import com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
+import com.github.nkzawa.socketio.client.IO;
+import com.github.nkzawa.socketio.client.Socket;
+
 import java.io.File;
+import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -93,6 +97,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        // for socket io
+        mSocket.connect();
+
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -142,6 +151,14 @@ public class MainActivity extends Activity {
 
         speedometer=(Speedometer)findViewById(R.id.speed);
         mRecorder = new MyMediaRecorder();
+    }
+
+    // for socket io
+    private Socket mSocket;
+    {
+        try {
+            mSocket = IO.socket("http://13.125.163.183:3000");
+        } catch (URISyntaxException e) {}
     }
 
     private void updateData(float val, long time) {
@@ -260,6 +277,7 @@ public class MainActivity extends Activity {
                                 // Update with thread
                                 Message message = new Message();
                                 message.what = 1;
+                                mSocket.emit("soundmeter", World.dbCount);
                                 handler.sendMessage(message);
                             }
                         }

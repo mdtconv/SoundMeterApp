@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yuhogyun/Sound-Meter/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/Users/yuhogyun/Sound-Meter/app/src/main/res/values-zh/strings.xml",
+                    "from": {
+                        "startLines": "11,13,3,5,4,12,10,7,8,6,1,15,20,16,17,18,19",
+                        "startColumns": "1,1,1,1,1,1,1,1,1,1,4,1,1,1,1,1,1",
+                        "startOffsets": "475,567,82,186,137,521,429,288,349,235,16,639,896,691,747,797,848",
+                        "endColumns": "45,45,54,48,48,45,45,60,51,52,40,51,73,55,49,50,47",
+                        "endOffsets": "519,611,135,233,184,565,473,347,399,286,52,689,968,745,795,846,894"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,153,211,263,315,364,413,477,532,588,629,684,761,820,873,927",
+                        "endColumns": "48,48,57,51,51,48,48,63,54,55,40,54,76,58,52,53,50",
+                        "endOffsets": "99,148,206,258,310,359,408,472,527,583,624,679,756,815,868,922,973"
+                    }
+                }
+            ]
+        }
+    ]
+}

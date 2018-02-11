@@ -1,0 +1,4 @@
+#Sat Feb 10 12:41:01 KST 2018
+base.0=/Users/yuhogyun/Sound-Meter/app/build/intermediates/transforms/dex/release/0
+renamed.0=classes.dex
+file.0=/Users/yuhogyun/Sound-Meter/app/build/intermediates/transforms/dex/release/0/classes.dex

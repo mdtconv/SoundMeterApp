@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.bodekjan.soundmeter"
@@ -20,6 +20,10 @@ android {
     repositories {
         maven { url "https://jitpack.io" }
      }
+    lintOptions {
+        checkReleaseBuilds false
+        // abortOnError false
+    }
 }
 
 dependencies {
@@ -29,4 +33,5 @@ dependencies {
 //    compile 'com.github.glomadrian:velocimeterlibrary:1.0@aar'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
     compile 'com.github.neopixl:PixlUI:v1.1.0'
+    compile 'com.github.nkzawa:socket.io-client:0.3.0'
 }
